@@ -1,0 +1,9 @@
+<div *ngIf="!hide; else exp">
+    <h1>Delivery will be attempted by {{dm}}</h1>
+    <p>Please show this OTP {{otp}} after getting the delivery</p>
+    Please accpet within {{seconds}} seconds
+    <mat-spinner></mat-spinner>
+</div>
+<ng-template #exp>
+  <h1>No OTP at the moment</h1>
+</ng-template>

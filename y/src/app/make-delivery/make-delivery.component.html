@@ -1,0 +1,34 @@
+<h2>Make Delivery</h2>
+<mat-form-field>
+  <mat-label>Delivery Man</mat-label>
+  <mat-select>
+    <mat-option
+      *ngFor="let i of dm;"
+      [value]="i.value">
+      {{i.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Order Id</mat-label>
+    <mat-select>
+      <mat-option
+        *ngFor="let i of order;"
+        [value]="i.value">
+        {{i.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Delivery Man</mat-label>
+      <mat-select>
+        <mat-option
+          *ngFor="let i of store;"
+          [value]="i.value">
+          {{i.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+      <input [(ngModel)]="otp" *ngIf="!showButton1" matInput placeholder="Enter OTP">
+<button *ngIf="showButton1" (click)="requestOTP()" mat-button>Make Delivery!</button>
+<button *ngIf="!showButton1" (click)="acceptOTP()" mat-button>Accept OTP</button>
