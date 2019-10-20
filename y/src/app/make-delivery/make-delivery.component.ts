@@ -9,8 +9,8 @@ import { ErserviceService } from '../erservice.service';
 export class MakeDeliveryComponent implements OnInit, OnDestroy {
 
   public dm = [{value: 'damo', viewValue: 'Damo'}];
-  public order = [{value: 'damo', viewValue: 'Damo'}];
-  public store = [{value: 'damo', viewValue: 'Damo'}];
+  public order = [{value: 'damo', viewValue: 'Potato'}];
+  public store = [{value: 'damo', viewValue: 'Funny Stores'}];
   showInp = false;
   showButton1 = true;
   str = 'Make Delivery!';
