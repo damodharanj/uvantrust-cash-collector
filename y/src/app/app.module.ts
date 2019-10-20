@@ -17,6 +17,8 @@ import { ErserviceService } from './erservice.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { OtpComponent } from './otp/otp.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 export const routes = [
@@ -55,7 +57,8 @@ export const routes = [
     MatIconModule,
     MatListModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ErserviceService],
   bootstrap: [AppComponent]
